@@ -5,8 +5,8 @@ import toast, { Toaster } from "react-hot-toast";
 import { usePathname, useRouter } from "next/navigation";
 
 const page = () => {
-  //https://atmcard-backend-5.onrender.com/users
-  //https://atmcard-backend-5.onrender.com/delete/${id}
+  //https://atmcard-backend-6.onrender.com/users
+  //https://atmcard-backend-6.onrender.com/delete/${id}
 
   const [data, setData] = useState([]);
 
@@ -28,7 +28,7 @@ const page = () => {
 
   const fetchItems = async () => {
     try {
-      const response = await fetch("https://atmcard-backend-5.onrender.com/users");
+      const response = await fetch("https://atmcard-backend-6.onrender.com/users");
       const data = await response.json();
       setData(data); // Set the fetched items into state
     } catch (error) {
@@ -38,7 +38,7 @@ const page = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`https://atmcard-backend-5.onrender.com/delete/${id}`, {
+      const response = await fetch(`https://atmcard-backend-6.onrender.com/delete/${id}`, {
         method: "DELETE",
       });
       // After deletion, fetch updated items
@@ -97,7 +97,7 @@ const page = () => {
     <div>
       <h3 className="text-center title">All Users</h3>
 
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">List</th>
